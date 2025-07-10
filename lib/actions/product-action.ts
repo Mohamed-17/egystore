@@ -1,5 +1,4 @@
 "use server";
-
 import { prisma } from "@/db/prisma";
 import { APP_LATEST_PRODUCTS_LIMIT } from "../constans";
 import { convertData } from "../utils";
