@@ -24,7 +24,7 @@ async function ProductPage({ params }: Props) {
         </div>
 
         {/* Details section */}
-        <div className="px-5 flex flex-col gap-6 col-span-2">
+        <div className="pt-7 pb-2 md:p-6 flex flex-col gap-6 col-span-2 md:ms-4">
           <p>
             {product.brand} {product.category}
           </p>
@@ -35,7 +35,7 @@ async function ProductPage({ params }: Props) {
           <Button className="w-20 rounded-full bg-green-100 text-green-700 cursor-pointer">
             <ProductPrice value={Number(product.price)} />
           </Button>
-          <div className="flex flex-row md:flex-col gap-2 mt-6">
+          <div className="flex flex-row md:flex-col gap-2 my-6">
             <p className="font-semibold">Description:</p>
             <p>{product.description}</p>
           </div>
