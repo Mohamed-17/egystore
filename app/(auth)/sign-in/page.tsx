@@ -9,8 +9,24 @@ import { APP_NAME } from "@/lib/constans";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import SignInForm from "./SignInForm";
+import { redirect } from "next/navigation";
+import { auth } from "@/auth";
+import { Metadata } from "next";
 
-function page() {
+const metadata: Metadata = {
+  title: "Sign In",
+};
+async function page(props: {
+  searchParams: Promise<{
+    callbackUrl: string;
+  }>;
+}) {
+  const session = await auth();
+  const callbackUrl = (await props.searchParams).callbackUrl;
+  if (session?.user) {
+    redirect(callbackUrl || "/");
+  }
   return (
     <div className="w-full max-w-md mx-auto ">
       <Card>
@@ -30,6 +46,7 @@ function page() {
           </CardDescription>
         </CardHeader>
         <CardContent></CardContent>
+        <SignInForm />
       </Card>
     </div>
   );

@@ -12,6 +12,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "../ui/sheet";
+import UserMenu from "./UserMenu";
 
 function Menu() {
   return (
@@ -23,11 +24,7 @@ function Menu() {
             <ShoppingCart /> Cart
           </Link>
         </Button>
-        <Button asChild>
-          <Link href={"/sign-in"}>
-            <UserIcon /> Sign in
-          </Link>
-        </Button>
+        <UserMenu />
       </div>
       <nav className="md:hidden ">
         <Sheet>
@@ -45,11 +42,7 @@ function Menu() {
                 <ShoppingCart /> Cart
               </Link>
             </Button>
-            <Button asChild>
-              <Link href={"/sign-in"}>
-                <UserIcon /> Sign in
-              </Link>
-            </Button>
+            <UserMenu />
           </SheetContent>
         </Sheet>
       </nav>
