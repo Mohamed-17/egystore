@@ -12,15 +12,15 @@ export default function Header() {
       <div className="wrapper flex-between">
         <Link href={"/"} className="flex-start space-x-2">
           <Image
-            src={"/images/logo.svg"}
-            height={48}
-            width={48}
+            src={"/images/logo.jpg"}
+            height={58}
+            width={58}
             alt={`${APP_NAME} logo`}
             priority={true}
           />{" "}
-          <span className=" hidden lg:block ml-2 font-bold text-2xl">
+          {/* <span className=" hidden lg:block ml-2 font-bold text-2xl">
             {APP_NAME}
-          </span>
+          </span> */}
         </Link>
 
         <Menu />

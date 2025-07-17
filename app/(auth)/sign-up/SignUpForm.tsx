@@ -32,7 +32,7 @@ const SignUpForm = () => {
     <form action={action}>
       <input type="hidden" name="callbackUrl" value={callbackUrl} />
       <div className="space-y-6">
-        <div>
+        <div className="space-y-2">
           <Label htmlFor="email">Name</Label>
           <Input
             id="name"
@@ -42,7 +42,7 @@ const SignUpForm = () => {
             defaultValue={""}
           />
         </div>
-        <div>
+        <div className="space-y-2">
           <Label htmlFor="email">Email</Label>
           <Input
             id="email"
@@ -52,7 +52,7 @@ const SignUpForm = () => {
             defaultValue={""}
           />
         </div>
-        <div>
+        <div className="space-y-2">
           <Label htmlFor="password">Password</Label>
           <Input
             id="password"
@@ -63,7 +63,7 @@ const SignUpForm = () => {
             defaultValue={""}
           />
         </div>
-        <div>
+        <div className="space-y-2">
           <Label htmlFor="confirmPassword">Confirm Password</Label>
           <Input
             id="confirmPassword"
