@@ -7,3 +7,9 @@ export const APP_SERVER_URL =
 
 export const APP_LATEST_PRODUCTS_LIMIT =
   Number(process.env.APP_LATEST_PRODUCTS_LIMIT) || 4;
+export const signUpDefaultValues = {
+  name: "",
+  email: "",
+  password: "",
+  confirmPassword: "",
+};

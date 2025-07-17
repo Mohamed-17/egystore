@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
+import { templateLiteral } from "zod";
 
-export const metadata: Metadata = {
-  title: "sign in",
-};
 export default function SignInLayout({
   children,
 }: Readonly<{
